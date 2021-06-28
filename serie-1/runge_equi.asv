@@ -20,6 +20,13 @@ for i=1:length(N)
 
   n = N(i);
   % TODO: Implement here
+  x = linspace(-1,1,n);
+  y = 1./(25.*xx.^2 + 1.);
+  p = polyfit(xx,yy,n);
+  
+  xx = linspace(-1,1);
+  yy = polyval(p,x);
+  
 
   plot(xx,yy,line{i+1},'LineWidth',2)
 
